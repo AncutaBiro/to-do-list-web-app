@@ -7,7 +7,7 @@ window.ToDoList = {
         let deadlineValue = $('#deadline-field').val();
 
         var requestBody = {
-            description: deadlineValue,
+            description: descriptionValue,
             deadline: deadlineValue
         };
 
@@ -23,11 +23,11 @@ window.ToDoList = {
 
     },
 
-    binderEvents: function() {
+    bindEvents: function() {
         $('#create-task-form').submit(function () {
             ToDoList.createTask();
         });
     }
 
 };
-ToDoList.binderEvents();
+ToDoList.bindEvents();
